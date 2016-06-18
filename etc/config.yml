@@ -1,0 +1,21 @@
+backup:
+  locations:
+    - src: /path/to/my/source/
+      dest: /path/to/my/destination/
+    - src: /path/to/my/source1/
+      dest: /path/to/my/destination1/
+  commands:
+    noexec:
+      - -nvia
+      - --delete
+    exec:
+      - -via
+      - --delete
+  log: /var/tmp/backups.log
+  delete_limit: 50
+  email:
+    target: my_target_email_address@gmail.com
+    smtp: smtp.gmail.com
+    smtp_port: 587
+    username: my_gmail@gmail.com
+    password: my_gmail_password
